@@ -155,7 +155,7 @@ nav a:active{
     content: "";
     position: absolute;
     top: 0;
-    left: -1px; /* Pour que le pseudo-élément se chevauche avec la bordure gauche */
+    left: -1px; 
     height: 100%;
     width: 1px; /* Largeur de la bordure */
     background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
@@ -164,9 +164,9 @@ nav a:active{
     content: "";
     position: absolute;
     top: 0;
-    right: -1px; /* Pour que le pseudo-élément se chevauche avec la bordure gauche */
+    right: -1px; 
     height: 100%;
-    width: 1px; /* Largeur de la bordure */
+    width: 1px; 
     background: linear-gradient(180deg, rgba(231,23,74,1) 17%, rgba(255,154,22,1) 72%);
 }
 
@@ -351,3 +351,56 @@ body > header > nav > a{
 }
 
 /* Responsive */
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+    /* Header */
+    header nav ul,header .buttonOrange{
+        display: none;
+    }
+    header .burgerMenu{
+        display: block;
+    }
+    #s2 article{
+        margin-top: 60px;
+    }
+    #s2 > div {
+        grid-template-columns: 1fr 1fr;
+    }
+    #s2 > div:nth-child(2) > article:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #s2 > div:nth-child(3) > article:nth-child(3){
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .container-1440{
+        max-width: unset;
+        margin: unset;
+        padding: unset;
+    }
+    /* header */
+    header nav ul,header .buttonOrange{
+        display: none;
+    }
+    header .burgerMenu{
+        display: block;
+    }
+    /* Section 2 */
+    #s2 > div {
+        grid-template-columns: 1fr;
+    }
+    #s2 article {
+        padding: 0px;
+        padding-bottom: 60px;
+    }
+    #s2 div .buttonDarkBlue {
+        bottom: 0px;
+        left: 11px;
+        width: 50%;
+        /* margin-top: 20px; */
+    }
+}
