@@ -48,7 +48,7 @@ p{
 img{
     max-width: 50%;
 }
-.burgerMenu{
+header .burgerMenu{
     display: none;
 }
 .buttonOrange{
